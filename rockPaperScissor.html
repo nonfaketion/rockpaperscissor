@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            var num = Math.floor(Math.random() * 3);
+            switch (num){
+                case 0: return "rock"; break;
+                case 1: return "paper"; break;
+                case 2: return "scissor"; break;
+            }
+
+        }
+        function playRound(playerSelection, ComputerSelection){
+            if(playerSelection==ComputerSelection){
+                console.log("Tie" + " you played " + playerSelection +" and Computer played " + ComputerSelection);
+            }
+            if(playerSelection=="paper"){
+                if(ComputerSelection=="scissor"){
+                    console.log("you lost"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+                else if(ComputerSelection=="rock"){
+                    console.log("you win"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+            }
+            if(playerSelection=="rock"){
+                if(ComputerSelection=="paper"){
+                    console.log("you lost"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+                else if(ComputerSelection=="scissor"){
+                    console.log("you win"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+            }
+            if(playerSelection=="scissor"){
+                if(ComputerSelection=="rock"){
+                    console.log("you lost"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+                else if(ComputerSelection=="paper"){
+                    console.log("you win"+ " you played " + playerSelection +" and Computer played " + ComputerSelection);
+                }
+            }
+
+        }
+        game();
+
+        function game(){
+            for(i =0; i<=5;i++){
+                const cpval  = computerPlay();
+                const pval = window.prompt('rock, paper, or scissor?');
+                playRound(pval,cpval);
+            }
+        }
+    </script>
+</body>
+</html>
