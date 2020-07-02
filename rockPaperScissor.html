@@ -7,11 +7,13 @@
     <title>RockPaperScissor</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
+    <div class="container" id ="toptitle">
+        <h1>Rock Paper Scissor</h1>
+</div>
 
     <div class="container">
         <div class="row">
@@ -25,7 +27,17 @@
             <button type="button" id="btn-scissor" class="btn btn-dark">Scissor</button>
           </div>
         </div>
-        <div class="row" id="gameresult"></div>
+        <div class="row">
+            <div class="col-md">
+                <h2 id ="playerscore">Player Score: 0</h2>
+              </div>
+              <div class="col-md">
+                <h2 id ="gameresult"></h2>
+              </div>
+              <div class="col-md">
+                <h2 id ="computerscore">Computer Score: 0</h2>
+              </div>
+        </div>
       </div>
 
 
