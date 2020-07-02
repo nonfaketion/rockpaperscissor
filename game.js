@@ -12,8 +12,11 @@ function playRound(playerSelection, ComputerSelection) {
     const gameresult = document.querySelector('#gameresult');
     const playerscore = document.querySelector('#playerscore');
     const computerscore = document.querySelector('#computerscore');
+    const tiescore = document.querySelector('#tiescore');
     if (playerSelection == ComputerSelection) {
         //console.log("Tie" + " you played " + playerSelection + " and Computer played " + ComputerSelection);
+        ties++;
+        tiescore.textContent = "Tie: "  + ties;
         gameresult.textContent = "Tie! " + " You played " + playerSelection + " and Computer played " + ComputerSelection;
         playerscore.textContent = "Player Score: " + playerwin;
         computerscore.textContent = "Computer Score: " + computerwin;
@@ -72,6 +75,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', game));
 var playerwin = 0;
 var computerwin = 0;
+var ties = 0;
 
 function game(e) {
         const cpval = computerPlay();
